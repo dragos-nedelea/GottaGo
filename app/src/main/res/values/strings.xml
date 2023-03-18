@@ -10,11 +10,23 @@
     <string name="screen3desc">YouTube live streaming allows you to reach your community in real time.
     Go live on YouTube from webcam, mobile and encoder streaming.</string>
     <string name="startDesc">Create a long video or shorts and upload on youtube. Interact with your subscribers on youtube live.</string>
+    <string name="AboutUs">Our app is meant to help the society to be able to move wherever they need by using other drivers offers. Those drivers wishing to take someone along the way with them for free or for some tax can post here their announces this way informing and helping those who need to get to the same destination.</string>
+
 
     <string name="open_nav">Open Navigation Drawer</string>
     <string name="close_nav">Close Navigation Drawer</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_login">LoginActivity</string>
 
 
 </resources>

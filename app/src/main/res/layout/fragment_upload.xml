@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Announces.UploadFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="20dp"
+            android:background="@drawable/roundedcorner">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create an announce"
+                android:textSize="37sp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30sp"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/ic_addimage"
+                android:id="@+id/uploadImage" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/uploadTopic"
+                android:background="@drawable/roundedcorner"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:hint="Enter announce title"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/orange"/>
+
+            <EditText
+                android:id="@+id/uploadDest"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/roundedcorner"
+                android:gravity="start|center_vertical"
+                android:hint="Enter the destination"
+                android:padding="16dp"
+                android:textColor="@color/orange" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/uploadDesc"
+                android:background="@drawable/roundedcorner"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:hint="Enter description"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/orange"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Save"
+                android:id="@+id/uploadSaveBtn"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/roundedcorner"
+                android:backgroundTint="@color/orange"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</ScrollView>

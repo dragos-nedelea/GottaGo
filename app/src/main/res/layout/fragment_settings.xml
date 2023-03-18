@@ -2,15 +2,92 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsFragment">
+    tools:context=".NavigationDrawer.SettingsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Settings Fragment"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"
-        android:textColor="@color/orange"/>
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="20dp"
+            android:background="@drawable/roundedcorner">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textSize="40sp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30sp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15sp"
+                android:text="Notifications"
+                android:textStyle="italic" />
+
+            <Switch
+                android:id="@+id/NotificationsSwitch"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15sp"
+                android:background="@drawable/roundedcorner"
+                android:checked="false"
+                android:drawableLeft="@drawable/notifications_icon"
+                android:gravity="left"
+                android:padding="15sp"
+                android:text=" Notifications"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15sp"
+                android:text="Appearance"
+                android:textStyle="italic" />
+
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/DarkModeSwitch"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15sp"
+                android:background="@drawable/roundedcorner"
+                android:checked="false"
+                android:drawableLeft="@drawable/dark_mode_icon"
+                android:gravity="left"
+                android:padding="15sp"
+                android:text=" Dark Mode"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15sp"
+                android:text="Privacy/Security"
+                android:textStyle="italic" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Change Password"
+                android:id="@+id/ForgotPassword"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/orange"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

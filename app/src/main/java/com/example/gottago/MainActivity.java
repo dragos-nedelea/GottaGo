@@ -6,11 +6,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Toast;
+import android.window.SplashScreen;
+
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.gottago.Announces.AnnouncementFragment;
+import com.example.gottago.Announces.UploadFragment;
+import com.example.gottago.NavigationDrawer.AboutFragment;
+import com.example.gottago.NavigationDrawer.HomeFragment;
+import com.example.gottago.NavigationDrawer.SettingsFragment;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -39,6 +47,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             navigationView.setCheckedItem(R.id.nav_home);
         }
 
+
+
+
     }
 
     @Override
@@ -62,9 +73,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AnnouncementFragment()).commit();
                 break;
 
+            case R.id.nav_createAnnounce:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new UploadFragment()).commit();
+                break;
+
 
             case R.id.nav_logout:
-                Toast.makeText(this, "Logout Successful!", Toast.LENGTH_SHORT).show();
+                Intent new2Intent = new Intent(this, SignUpActivity.class);
+                startActivity(new2Intent);
+                finish();
                 break;
         }
 

@@ -14,12 +14,13 @@
         <item
             android:id="@+id/nav_announces"
             android:icon="@drawable/nav_announcement"
-            android:title="Announces"/>
+            android:title="My Announces"/>
 
-    <item
-        android:id="@+id/nav_about"
-        android:icon="@drawable/nav_about"
-        android:title="About Us"/>
+
+        <item
+            android:id="@+id/nav_createAnnounce"
+            android:icon="@drawable/nav_create"
+            android:title="Create an Announce"/>
 
     </group>
 
@@ -33,10 +34,15 @@
                 android:title="Settings"
                 />
             <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/nav_about"
+                android:title="About Us"/>
+            <item
                 android:id="@+id/nav_logout"
                 android:icon="@drawable/nav_logout"
-                android:title="Log out"
+                android:title="Sign up"
                 />
+
 
         </menu>
 
