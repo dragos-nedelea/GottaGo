@@ -78,7 +78,10 @@ public class SignUpActivity extends AppCompatActivity {
                             // create acc is done
                             Utility.showToast(SignUpActivity.this, "Successfully created account, Check email to verify");
                             firebaseAuth.getCurrentUser().sendEmailVerification();
-                            firebaseAuth.signOut();
+
+                            // auto-login the user
+                            firebaseAuth.signInWithEmailAndPassword(email, password);
+
                             startActivity(new Intent(SignUpActivity.this,MainActivity.class));
                         }else {
                             //failure

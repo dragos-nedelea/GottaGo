@@ -30,6 +30,7 @@ public class HomeFragment extends Fragment {
     List<DataClass> dataList;
     DatabaseReference databaseReference;
     ValueEventListener eventListener;
+    MyAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,7 +38,7 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_home, container, false);
 
-        recyclerView = v.findViewById(R.id.recyclerView);
+        recyclerView = v.findViewById(R.id.recyclerViewHome);
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager ( getActivity().getApplicationContext(), 1);
         recyclerView.setLayoutManager (gridLayoutManager);
@@ -50,7 +51,7 @@ public class HomeFragment extends Fragment {
 
         dataList = new ArrayList<>();
 
-        MyAdapter adapter = new MyAdapter(getActivity().getApplicationContext(), dataList);
+        adapter = new MyAdapter(getActivity().getApplicationContext(), dataList);
         recyclerView.setAdapter (adapter);
 
         databaseReference = FirebaseDatabase.getInstance().getReference ( "Android Tutorials");
@@ -62,6 +63,7 @@ public class HomeFragment extends Fragment {
                 dataList.clear();
                 for (DataSnapshot itemSnapshot: snapshot.getChildren()) {
                     DataClass dataClass = itemSnapshot.getValue(DataClass.class);
+                    dataClass.setKey(itemSnapshot.getKey());
                     dataList.add(dataClass);
                 }
                 adapter.notifyDataSetChanged();

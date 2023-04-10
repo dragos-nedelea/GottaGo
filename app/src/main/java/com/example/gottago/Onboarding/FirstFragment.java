@@ -1,4 +1,4 @@
-package com.example.gottago;
+package com.example.gottago.Onboarding;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.example.gottago.R;
 import com.example.gottago.databinding.FragmentFirstBinding;
 
 public class FirstFragment extends Fragment {

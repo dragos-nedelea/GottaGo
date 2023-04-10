@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/sliderDesc"
         android:layout_marginTop="20dp"
-        android:text="Make it easy straight to the needed destionation together with us!"
+        android:text="@string/screen4desc"
         android:textSize="20sp"
         android:layout_marginHorizontal="30dp"
         android:textAlignment="center"

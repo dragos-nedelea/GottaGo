@@ -3,6 +3,7 @@ package com.example.gottago;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.gottago.NavigationDrawer.HomeFragment;
 import com.example.gottago.NavigationDrawer.SettingsFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -64,9 +65,14 @@ public class LoginActivity extends AppCompatActivity {
                 changeInProgress(false);
                 if (task.isSuccessful()) {
                     //login successfully
+
+                    String uid = firebaseAuth.getCurrentUser().getUid();
+                    SharedPrefsUtils.setUid(getApplicationContext(), uid);
+
                     if (firebaseAuth.getCurrentUser().isEmailVerified()){
                         // go to main activity
-                        startActivity(new Intent(LoginActivity.this, SettingsFragment.class));
+                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                        Utility.showToast(LoginActivity.this, "Logged Successful");
 
                     }else {
                         Utility.showToast(LoginActivity.this, "Email not verified, please verify your email");

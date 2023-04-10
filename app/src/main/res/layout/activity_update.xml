@@ -3,12 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".Announces.UploadFragment">
+    android:layout_height="match_parent"
+    tools:context=".Announces.UpdateActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
         app:cardElevation="20dp"
         app:cardCornerRadius="10dp">
 
@@ -23,7 +26,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/uploadTitle"
+                android:text="@string/updateTitle"
                 android:textSize="37sp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="30sp"
@@ -33,38 +36,38 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:src="@drawable/ic_addimage"
-                android:id="@+id/uploadImage" />
+                android:id="@+id/updateImage" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/uploadTopic"
+                android:id="@+id/updateTitle"
                 android:background="@drawable/roundedcorner"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
-                android:hint="@string/uploadInsertTitle"
+                android:hint="@string/updateInsertTitle"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/orange"/>
 
             <EditText
+                android:id="@+id/updateNumber"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/uploadNumber"
-                android:background="@drawable/roundedcorner"
                 android:layout_marginTop="20dp"
-                android:padding="16dp"
-                android:hint="@string/uploadInsertNumber"
+                android:background="@drawable/roundedcorner"
                 android:gravity="start|center_vertical"
-                android:textColor="@color/orange"/>
+                android:hint="@string/updateInsertNumber"
+                android:padding="16dp"
+                android:textColor="@color/orange" />
 
             <EditText
-                android:id="@+id/uploadDest"
+                android:id="@+id/updateDest"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/roundedcorner"
                 android:gravity="start|center_vertical"
-                android:hint="@string/uploadInsertDestination"
+                android:hint="@string/updatedInsertDestination"
                 android:padding="16dp"
                 android:textColor="@color/orange" />
 
@@ -84,11 +87,11 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:id="@+id/uploadDesc"
+                android:id="@+id/updateDesc"
                 android:background="@drawable/roundedcorner"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
-                android:hint="@string/uploadInsertDescription"
+                android:hint="@string/updateInsertDescription"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/orange"/>
 
@@ -101,8 +104,8 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="@string/uploadSaveButton"
-                android:id="@+id/uploadSaveBtn"
+                android:text="@string/updateEditButton"
+                android:id="@+id/updateSaveBtn"
                 android:textSize="18sp"
                 android:textColor="@color/black"
                 android:layout_marginTop="20dp"
