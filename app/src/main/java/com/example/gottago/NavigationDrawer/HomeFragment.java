@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -31,6 +32,7 @@ public class HomeFragment extends Fragment {
     DatabaseReference databaseReference;
     ValueEventListener eventListener;
     MyAdapter adapter;
+    SearchView searchView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,6 +41,8 @@ public class HomeFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_home, container, false);
 
         recyclerView = v.findViewById(R.id.recyclerViewHome);
+        searchView = v.findViewById(R.id.search);
+        searchView.clearFocus();
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager ( getActivity().getApplicationContext(), 1);
         recyclerView.setLayoutManager (gridLayoutManager);
@@ -72,10 +76,46 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                dialog.dismiss();;
+                dialog.dismiss();
+            }
+        });
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                searchList(newText);
+                return false;
             }
         });
 
         return v;
     }
+
+    public void searchList(String text) {
+        ArrayList<DataClass> searchList = new ArrayList<>();
+        for(DataClass dataClass: dataList){
+            if(dataClass.getDataTitle().toLowerCase().contains(text.toLowerCase())){
+                searchList.add(dataClass);
+            } else if(dataClass.getDataDest().toLowerCase().contains(text.toLowerCase())){
+                searchList.add(dataClass);
+            }
+        }
+        adapter.searchDataList(searchList);
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        loadData();
+    }
+
+    private void loadData() {
+        // Load the data and update the UI
+
+    }
+
 }

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="select_language_prompt">Selecteaza limba:</string>
+    <!--  Romanian Language  -->
+    <string name="app_name">GottaGo</string>
+    <string name="screen1">Încărcați un anunț</string>
+    <string name="screen2">Căutați alte anunțuri</string>
+    <string name="screen3">Ajungeți la destinația dorită</string>
+    <string name="screen1desc">Spune-ți la revedere așteptării pe bordură și salută plimbările fără întreruperi cu noua noastră oportunitate - cea mai rapidă și mai ușoară modalitate de a face o plimbare cu stil!</string>
+    <string name="screen2desc">Rămâneți în fața curbei și fiți primul care află despre actualizările interesante ale serviciului nostru de conducere, fiind cu ochii pe anunturile noastre viitoare!</string>
+    <string name="screen3desc">Sosiți cu stil și la timp cu serviciul nostru de conducere premium, ducându-vă fără probleme și rapid la destinația dorită.</string>
+    <string name="screen4desc">GottaGo - aplicația inovatoare de conducere anunță serviciu, revoluționează modul în care navigăm pe drumuri, oferind o experiență de condus fără probleme și fără stres pentru toți.</string>
+    <string name="AboutUs">Aplicația noastră este menită să ajute societatea să se poată deplasa oriunde are nevoie, folosind alte oferte de șoferi. Acei șoferi care doresc să ia cu ei pe cineva pe drum gratuit sau contra taxe pot posta aici anunturile lor, informând și ajutând pe cei care trebuie să ajungă la aceeași destinație. Acest site web a fost creat ca parte a „Tekwill Junior Ambassadors” competiție organizată de proiectul „Tekwill in Every School” și nu reflectă neapărat opinia proiectului.</string>
+    <string name="usernameAnonim">Hei, bine ai venit!</string>
+    <!--  Create announce  -->
+    <string name="uploadTitle">Creați un anunț</string>
+    <string name="uploadInsertTitle">Introduceți titlul anunțului</string>
+    <string name="uploadInsertNumber">ex: 069573245</string>
+    <string name="uploadInsertDestination">Introduceți destinația dvs</string>
+    <string name="uploadInsertStart">Introduceți locul de pornire</string>
+    <string name="uploadInsertDescription">Introduceți descrierea</string>
+    <string name="uploadSaveButton">Salvați</string>
+    <!--  Edit announce  -->
+    <string name="updateTitle">Editați anunțul</string>
+    <string name="updateInsertTitle">Introduceți titlul anunțului</string>
+    <string name="updateInsertNumber">Introdu numarul tau</string>
+    <string name="updatedInsertDestination">Introduceți destinația dvs</string>
+    <string name="updateHintStart">Introduceți locul de pornire</string>
+    <string name="updateInsertDescription">Introduceți descrierea</string>
+    <string name="updateEditButton">Editați</string>
+    <!--  Detail announce  -->
+    <string name="detailOwner">Proprietar</string>
+    <string name="detailTitle">Titlu</string>
+    <string name="detailHintDestination">Destinaţie:</string>
+    <string name="detailDestination">Destinaţie</string>
+    <string name="detailHintStart">Punctul de pornire:</string>
+    <string name="detailStart">Locația</string>
+    <string name="detailHintNumber">Număr de telefon:</string>
+    <string name="detailNumber">Număr de telefon</string>
+    <string name="detailHintFee">Despre taxa:</string>
+    <string name="detailFee">Taxa</string>
+    <string name="detailHintDescription">Descriere:</string>
+    <string name="detailDescription">Descriere</string>
+    <!--  Home Search  -->
+    <string name="homeSearch">Căutare...</string>
+    <!--  Settings announce  -->
+    <string name="settingsFragment">Setări</string>
+    <string name="settingsDomainTitle1">Notificări</string>
+    <string name="settingsTitle">Notificări</string>
+    <string name="settingsDomainTitle2">Aspect</string>
+    <string name="settingsTitle2">Modul întunecat</string>
+    <string name="settingsDomainTitle3">Confidențialitate/Securitate</string>
+    <string name="settingsTitle3">Schimbaţi parola</string>
+    <string name="settingsDomainTitle4">Limba</string>
+
+    <string name="open_nav">Deschideți Sertarul de navigare</string>
+    <string name="close_nav">Închideți sertarul de navigare</string>
+    <string name="hello_blank_fragment">Salut fragment gol</string>
+    <string name="title_activity_sign_up">Activitate de înregistrare</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Primul fragment</string>
+    <string name="second_fragment_label">Al doilea fragment</string>
+    <string name="next">Următorul</string>
+    <string name="previous">Anterior</string>
+
+    <string name="hello_first_fragment">Salut primul fragment</string>
+    <string name="hello_second_fragment">Salut al doilea fragment.</string>
+    <string name="title_activity_login">Activitate de conectare</string>
+</resources>

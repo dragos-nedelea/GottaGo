@@ -1,7 +1,10 @@
-package com.example.gottago;
+package com.example.gottago.SharedPrefs;
+
 
 import android.content.Context;
 import android.content.SharedPreferences;
+
+import com.example.gottago.Announces.DetailActivity;
 
 public class SharedPrefsUtils {
 

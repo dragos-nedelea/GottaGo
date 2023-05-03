@@ -1,24 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/recCard"
-    android:layout_marginStart="12dp"
-    android:layout_marginEnd="12dp"
-    android:layout_marginHorizontal="10dp"
-    android:layout_marginVertical="10dp"
-    app:cardCornerRadius="20dp"
-    app:cardElevation="8dp">
+    android:layout_margin="15dp"
+    app:cardCornerRadius="10dp"
+    >
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Announces.DetailActivity">
+    tools:context=".Announces.DetailActivity"
+    android:padding="20dp"
+    android:background="@drawable/roundedcorner"
+
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        android:layout_gravity="start"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/backBtn"
+            android:padding="8dp"
+            android:src="@drawable/ic_backarrow"
+            android:background="@color/white"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/detailOwner"
+            android:text="@string/detailOwner"
+            android:textSize="25sp"
+            android:textStyle="italic"
+            android:layout_gravity="center"
+            android:textColor="@color/black"/>
+
+    </androidx.cardview.widget.CardView>
 
     <ImageView
         android:layout_width="match_parent"
@@ -28,79 +62,154 @@
         android:layout_gravity="center"
         android:src="@drawable/ic_addimage" />
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginVertical="10dp">
+        >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/detailTitle"
-            android:text="Title"
-            android:layout_marginTop="14dp"
+            android:text="@string/detailTitle"
             android:textSize="24sp"
-            android:layout_gravity="start"
+            android:layout_gravity="center"
             android:textColor="@color/black"/>
 
-        <TextView
-            android:layout_width="wrap_content"
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/detailDest"
-            android:text="Destination"
-            android:layout_marginTop="14dp"
-            android:textSize="24sp"
-            android:layout_gravity="start"
-            android:textStyle="italic"/>
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detailHintDestination"
+                android:textStyle="italic"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailDest"
+                android:text="@string/detailDestination"
+                android:textSize="24sp"
+                android:layout_gravity="start"
+                android:textStyle="italic"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detailHintStart"
+                android:textStyle="italic"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailStart"
+                android:text="@string/detailStart"
+                android:textSize="24sp"
+                android:layout_gravity="start"
+                android:textStyle="italic"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detailHintNumber"
+                android:textStyle="italic"
+                android:layout_marginTop="15dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailNumber"
+                android:text="@string/detailNumber"
+                android:textSize="24sp"
+                android:layout_gravity="start"
+                android:textStyle="italic"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/detailNumber"
-            android:text="Number"
-            android:layout_marginTop="14dp"
-            android:textSize="24sp"
-            android:layout_gravity="start"
-            android:textStyle="italic"/>
+            android:text="@string/detailHintFee"
+            android:textStyle="italic"
+            android:layout_marginTop="15dp"
+            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/detailFee"
-            android:text="For free"
-            android:layout_marginTop="14dp"
+            android:text="@string/detailFee"
             android:textSize="20sp"
             android:layout_gravity="start"
+            android:layout_marginBottom="10dp"
             android:textColor="@color/orange"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+        </LinearLayout>
 
     </LinearLayout>
 
-    <androidx.cardview.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/recCard2">
+        android:layout_marginTop="15dp"
+        android:text="@string/detailHintDescription"
+        android:textStyle="italic" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:padding="20dp"
-        android:text="Description"
+        android:text="@string/detailDescription"
         android:id="@+id/detailDesc"
         android:textSize="18sp"
         android:textColor="@color/black"/>
 
-    </androidx.cardview.widget.CardView>
-
+</LinearLayout>
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+
 
         <com.github.clans.fab.FloatingActionMenu
             android:layout_width="wrap_content"
@@ -109,13 +218,24 @@
             android:layout_alignParentEnd="true"
             app:menu_fab_size="normal"
             android:id="@+id/floatMenu"
-            android:layout_marginBottom="20dp"
-            android:layout_marginEnd="10dp"
             app:menu_colorPressed="@color/orange"
             app:menu_colorNormal="@color/orange"
             app:menu_icon="@drawable/ic_format_list_bulleted"
             app:menu_openDirection="up"
-            app:menu_showShadow="true">
+            app:menu_showShadow="true"
+            tools:ignore="MissingClass">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/callBtn"
+                android:src="@drawable/ic_call"
+                app:fab_showShadow="true"
+                app:fab_colorNormal="@color/green"
+                app:fab_size="mini"
+                app:layout_anchor="@id/recCard"
+                app:layout_anchorGravity="bottom|end"/>
+
 
             <com.github.clans.fab.FloatingActionButton
                 android:layout_width="wrap_content"
@@ -124,7 +244,9 @@
                 android:src="@drawable/ic_delete"
                 app:fab_showShadow="true"
                 app:fab_colorNormal="@color/red"
-                app:fab_size="mini"/>
+                app:fab_size="mini"
+                app:layout_anchor="@id/recCard"
+                app:layout_anchorGravity="bottom|end"/>
 
             <com.github.clans.fab.FloatingActionButton
                 android:layout_width="wrap_content"
@@ -133,13 +255,12 @@
                 android:src="@drawable/ic_edit"
                 app:fab_showShadow="true"
                 app:fab_colorNormal="@color/gray"
-                app:fab_size="mini"/>
+                app:fab_size="mini"
+                app:layout_anchor="@id/recCard"
+                app:layout_anchorGravity="bottom|end"/>
 
         </com.github.clans.fab.FloatingActionMenu>
 
 
     </RelativeLayout>
-
-
-</LinearLayout>
 </androidx.cardview.widget.CardView>

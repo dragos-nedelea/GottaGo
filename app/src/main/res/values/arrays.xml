@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="language_options">
+        <item>English</item>
+        <item>Romanian</item>
+    </string-array>
+
+    <string name="language_code_en" translatable="false">en</string>
+    <string name="language_code_ro" translatable="false">ro</string>
+</resources>

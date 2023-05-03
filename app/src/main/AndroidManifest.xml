@@ -2,6 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <permission
+        android:name="your.package.name.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="your.package.name.permission.C2D_MESSAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,6 +22,7 @@
         android:theme="@style/Theme.GottaGo"
         android:name=".SharedPrefs.MyApplication"
         tools:targetApi="31">
+
         <activity
             android:name=".Announces.UpdateActivity"
             android:exported="false" />
@@ -26,12 +36,12 @@
             android:name=".NavigationDrawer.HomeFragment"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".FirebaseAuth.LoginActivity"
             android:exported="false"
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.GottaGo.NoActionBar" />
         <activity
-            android:name=".SignUpActivity"
+            android:name=".FirebaseAuth.SignUpActivity"
             android:exported="false"
             android:label="@string/title_activity_sign_up"
             android:theme="@style/Theme.GottaGo.NoActionBar" />

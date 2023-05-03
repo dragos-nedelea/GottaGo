@@ -1,10 +1,12 @@
-package com.example.gottago;
+package com.example.gottago.FirebaseAuth;
 
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.gottago.MainActivity;
+import com.example.gottago.R;
+import com.example.gottago.Utility;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,15 +18,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import com.example.gottago.databinding.ActivitySignUpBinding;
-
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -48,7 +42,7 @@ public class SignUpActivity extends AppCompatActivity {
         loginBtnTextView = findViewById(R.id.login_text_view_btn);
 
         createAccountButton.setOnClickListener(v-> CreateAccount());
-        loginBtnTextView.setOnClickListener((v)->startActivity(new Intent(SignUpActivity.this,LoginActivity.class)));
+        loginBtnTextView.setOnClickListener((v)->startActivity(new Intent(SignUpActivity.this, LoginActivity.class)));
 
 
     }
@@ -82,7 +76,7 @@ public class SignUpActivity extends AppCompatActivity {
                             // auto-login the user
                             firebaseAuth.signInWithEmailAndPassword(email, password);
 
-                            startActivity(new Intent(SignUpActivity.this,MainActivity.class));
+                            startActivity(new Intent(SignUpActivity.this, MainActivity.class));
                         }else {
                             //failure
                             Utility.showToast(SignUpActivity.this, task.getException().getLocalizedMessage());

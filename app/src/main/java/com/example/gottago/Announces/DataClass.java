@@ -1,19 +1,18 @@
 package com.example.gottago.Announces;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 public class DataClass {
 
     private String dataTitle;
     private String dataDesc;
     private String dataDest;
+    private String dataStart;
     private String dataImage;
+    private String dataUserName;
     private String uid;
     private String key;
     private boolean switchValue;
     private int numberValue;
+    private long timestamp;
 
     public String getKey() {
         return key;
@@ -23,14 +22,17 @@ public class DataClass {
         this.key = key;
     }
 
-    public DataClass(String dataTitle, int numberValue, String dataDesc, String dataDest, String dataImage, String uid, boolean switchValue) {
+    public DataClass(String dataTitle, int numberValue, String dataDesc, String dataDest, String dataStart, String dataImage, String uid, boolean switchValue, long timestamp, String dataUserName) {
         this.dataTitle = dataTitle;
         this.numberValue = numberValue;
         this.dataDesc = dataDesc;
         this.dataDest = dataDest;
+        this.dataStart = dataStart;
         this.dataImage = dataImage;
+        this.dataUserName = dataUserName;
         this.uid = uid;
         this.switchValue = switchValue;
+        this.timestamp = timestamp;
 
     }
 
@@ -58,6 +60,14 @@ public class DataClass {
 
     public void setDataDest(String dataDest) {
         this.dataDest = dataDest;
+    }
+
+    public String getDataStart() {
+        return dataStart;
+    }
+
+    public void setDataStart(String dataStart) {
+        this.dataStart = dataStart;
     }
 
     public String getDataImage() {
@@ -92,7 +102,24 @@ public class DataClass {
         this.numberValue = numberValue;
     }
 
+    public long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    public String getDataUserName() {
+        return dataUserName;
+    }
+
+    public void setDataUserName(String dataUserName) {
+        this.dataUserName = dataUserName;
+    }
+
     public DataClass() {
         // required empty constructor for Firebase
     }
 }
+

@@ -1,10 +1,12 @@
-package com.example.gottago;
+package com.example.gottago.FirebaseAuth;
 
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.gottago.NavigationDrawer.HomeFragment;
-import com.example.gottago.NavigationDrawer.SettingsFragment;
+import com.example.gottago.MainActivity;
+import com.example.gottago.R;
+import com.example.gottago.SharedPrefs.SharedPrefsUtils;
+import com.example.gottago.Utility;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
@@ -40,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         createAccountBtnTextView = findViewById(R.id.create_account_text_view_btn);
 
         loginBtn.setOnClickListener((v)-> loginUser());
-        createAccountBtnTextView.setOnClickListener((v)->startActivity(new Intent(LoginActivity.this,SignUpActivity.class)));
+        createAccountBtnTextView.setOnClickListener((v)->startActivity(new Intent(LoginActivity.this, SignUpActivity.class)));
 
     }
 

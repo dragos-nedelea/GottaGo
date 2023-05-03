@@ -2,14 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".NavigationDrawer.SettingsFragment">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp">
+        android:layout_margin="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -19,21 +18,42 @@
             android:padding="20dp"
             android:background="@drawable/roundedcorner">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Settings"
-                android:textSize="40sp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="30sp"
-                android:textColor="@color/black"
-                />
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="30dp"
+                >
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/backBtn"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_backarrow"
+                    android:background="@color/white"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/detailOwner"
+                    android:text="@string/settingsFragment"
+                    android:textSize="25sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15sp"
-                android:text="Notifications"
+                android:text="@string/settingsDomainTitle1"
                 android:textStyle="italic" />
 
             <Switch
@@ -46,14 +66,14 @@
                 android:drawableLeft="@drawable/notifications_icon"
                 android:gravity="left"
                 android:padding="15sp"
-                android:text=" Notifications"
+                android:text="@string/settingsTitle"
                 android:textSize="25sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15sp"
-                android:text="Appearance"
+                android:text="@string/settingsDomainTitle2"
                 android:textStyle="italic" />
 
 
@@ -67,21 +87,36 @@
                 android:drawableLeft="@drawable/dark_mode_icon"
                 android:gravity="left"
                 android:padding="15sp"
-                android:text=" Dark Mode"
+                android:text="@string/settingsTitle2"
                 android:textSize="25sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/settingsDomainTitle4"
+                android:textStyle="italic" />
+
+            <Spinner
+                android:id="@+id/languageSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:entries="@array/language_options"
+                android:prompt="@string/select_language_prompt"
+                android:layout_marginBottom="15sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="15sp"
-                android:text="Privacy/Security"
+                android:text="@string/settingsDomainTitle3"
                 android:textStyle="italic" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Change Password"
-                android:id="@+id/ForgotPassword"
+                android:text="@string/settingsTitle3"
+                android:id="@+id/forgotPassword"
                 android:textSize="18sp"
                 android:textColor="@color/black"
                 android:backgroundTint="@color/orange"/>

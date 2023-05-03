@@ -1,20 +1,23 @@
 <resources>
-<!--  English Language  -->
+    <string name="select_language_prompt">Select a language:</string>
+
+    <!--  English Language  -->
     <string name="app_name">GottaGo</string>
     <string name="screen1">Upload an announcement</string>
     <string name="screen2">Look for other announcements</string>
     <string name="screen3">Get to your desired destination</string>
     <string name="screen1desc">Say goodbye to waiting on the curb and hello to seamless rides with our new opportunity - the quickest and easiest way to hail a ride in style!</string>
-    <string name="screen2desc">Stay ahead of the curve and be the first to know about exciting updates to our driving service by keeping an eye out for our upcoming announcements!L</string>
+    <string name="screen2desc">Stay ahead of the curve and be the first to know about exciting updates to our driving service by keeping an eye out for our upcoming announcements!</string>
     <string name="screen3desc">Arrive in style and on time with our premium driving service, taking you smoothly and swiftly to your desired destination.</string>
     <string name="screen4desc">GottaGo - the innovative driving announces service app, is revolutionizing the way we navigate the roads, providing a seamless and stress-free driving experience for all.</string>
     <string name="AboutUs">Our app is meant to help the society to be able to move wherever they need by using other drivers offers. Those drivers wishing to take someone along the way with them for free or for some tax can post here their announces this way informing and helping those who need to get to the same destination.This website was created as part of the "Tekwill Junior Ambassadors" competition organized by the "Tekwill in Every School" project and does not necessarily reflect the opinion of the project.</string>
     <string name="usernameAnonim">Hey there, welcome!</string>
-<!--  Create announce  -->
+<!--  Upload announce  -->
     <string name="uploadTitle">Create an announce</string>
     <string name="uploadInsertTitle">Enter announce title</string>
-    <string name="uploadInsertNumber">Enter your number</string>
+    <string name="uploadInsertNumber">ex: 069573245</string>
     <string name="uploadInsertDestination">Enter your destination</string>
+    <string name="uploadInsertStart">Enter your starting location</string>
     <string name="uploadInsertDescription">Enter description</string>
     <string name="uploadSaveButton">Save</string>
     <!--  Edit announce  -->
@@ -22,8 +25,33 @@
     <string name="updateInsertTitle">Enter announce title</string>
     <string name="updateInsertNumber">Enter your number</string>
     <string name="updatedInsertDestination">Enter your destination</string>
+    <string name="updateHintStart">Enter your starting location</string>
     <string name="updateInsertDescription">Enter description</string>
     <string name="updateEditButton">Edit</string>
+    <!--  Detail announce  -->
+    <string name="detailOwner">Owner</string>
+    <string name="detailTitle">Title</string>
+    <string name="detailHintDestination">Destination:</string>
+    <string name="detailDestination">Destination</string>
+    <string name="detailHintStart">Starting location:</string>
+    <string name="detailStart">Location</string>
+    <string name="detailHintNumber">Phone Number:</string>
+    <string name="detailNumber">Phone Number</string>
+    <string name="detailHintFee">About fee:</string>
+    <string name="detailFee">Fee</string>
+    <string name="detailHintDescription">Description:</string>
+    <string name="detailDescription">Description</string>
+    <!--  Home Search  -->
+    <string name="homeSearch">Search...</string>
+    <!--  Settings announce  -->
+    <string name="settingsFragment">Settings</string>
+    <string name="settingsDomainTitle1">Notifications</string>
+    <string name="settingsTitle">Notifications</string>
+    <string name="settingsDomainTitle2">Appearance</string>
+    <string name="settingsTitle2">Dark Mode</string>
+    <string name="settingsDomainTitle3">Privacy/Security</string>
+    <string name="settingsTitle3">Change Password</string>
+    <string name="settingsDomainTitle4">Language</string>
 
     <string name="open_nav">Open Navigation Drawer</string>
     <string name="close_nav">Close Navigation Drawer</string>
@@ -38,8 +66,5 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_login">LoginActivity</string>
-
-<!--  Romanian Language  -->
-
 
 </resources>
