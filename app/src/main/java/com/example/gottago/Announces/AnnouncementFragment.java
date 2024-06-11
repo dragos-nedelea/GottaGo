@@ -117,55 +117,55 @@ public class AnnouncementFragment extends Fragment {
 
 
 //        // Set onClickListener for delete button
-//        deleteBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                final DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Android Tutorials");
-//                FirebaseStorage storage = FirebaseStorage.getInstance();
-//
-////                AlertDialog.Builder builder = new AlertDialog.Builder(DetailActivity.this);
-////                builder.setCancelable(false);
-////                builder.setView(R.layout.progress_layout);
-////                final AlertDialog dialog = builder.create();
-////                dialog.show();
-//
-//                if (key != null) {
-//                    reference.child(key).removeValue();
-//                }
-//                Toast.makeText(getActivity(), "Deleted", Toast.LENGTH_SHORT).show();
-//                Intent intent = new Intent(getActivity(), HomeFragment.class);
-//                startActivity(intent);
-////                finish();
-//
-//            }
-//        });
-//
-//
-//        // Set onClickListener for edit button
-//        editBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-//                builder.setTitle("Edit Announcement");
-//                builder.setMessage("Are you sure you want to edit this announcement?");
-//                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        Intent intent = new Intent(getActivity(), UpdateActivity.class)
-//                                .putExtra("Title", detailTitle.getText().toString())
-//                                .putExtra("Number", Integer.parseInt(detailNumber.getText().toString()))
-//                                .putExtra("Description", detailDesc.getText().toString())
-//                                .putExtra("Destination", detailDest.getText().toString())
-//                                .putExtra("Image", imageUrl)
-//                                .putExtra("Key", key);
-//
-//                        startActivity(intent);
-//                    }
-//                });
-//                builder.setNegativeButton("No", null);
-//                builder.show();
-//            }
-//        });
+        deleteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Android Tutorials");
+                FirebaseStorage storage = FirebaseStorage.getInstance();
+
+//                AlertDialog.Builder builder = new AlertDialog.Builder(DetailActivity.this);
+//                builder.setCancelable(false);
+//                builder.setView(R.layout.progress_layout);
+//                final AlertDialog dialog = builder.create();
+//                dialog.show();
+
+                if (key != null) {
+                    reference.child(key).removeValue();
+                }
+                Toast.makeText(getActivity(), "Deleted", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(), HomeFragment.class);
+                startActivity(intent);
+//                finish();
+
+            }
+        });
+
+
+        // Set onClickListener for edit button
+        editBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("Edit Announcement");
+                builder.setMessage("Are you sure you want to edit this announcement?");
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(getActivity(), UpdateActivity.class)
+                                .putExtra("Title", detailTitle.getText().toString())
+                                .putExtra("Number", Integer.parseInt(detailNumber.getText().toString()))
+                                .putExtra("Description", detailDesc.getText().toString())
+                                .putExtra("Destination", detailDest.getText().toString())
+                                .putExtra("Image", imageUrl)
+                                .putExtra("Key", key);
+
+                        startActivity(intent);
+                    }
+                });
+                builder.setNegativeButton("No", null);
+                builder.show();
+            }
+        });
         return view;
     }
 

@@ -132,14 +132,14 @@ public class OnboardingNavigation extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        SharedPreferences sharedpreferences = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE);
-        if (!sharedpreferences.getBoolean(prevStarted, false)) {
-            SharedPreferences.Editor editor = sharedpreferences.edit();
-            editor.putBoolean(prevStarted, Boolean.TRUE);
-            editor.apply();
-        } else {
-            moveToSecondary();
-        }
+//        SharedPreferences sharedpreferences = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE);
+//        if (!sharedpreferences.getBoolean(prevStarted, false)) {
+//            SharedPreferences.Editor editor = sharedpreferences.edit();
+//            editor.putBoolean(prevStarted, Boolean.TRUE);
+//            editor.apply();
+//        } else {
+//            moveToSecondary();
+//        }
     }
 
     public void moveToSecondary(){
